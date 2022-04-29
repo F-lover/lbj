@@ -1,0 +1,80 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int n=10,i,a,b,result,k=10;
+	while(n>0)
+	{
+	srand( (unsigned)time( NULL ) );
+	a=rand()%100+1;
+	b=rand()%100+1;
+	i=rand()%4;
+	switch(i)
+	{
+	case 0:
+	{
+		printf("%d+%d=",a,b);
+		scanf("%d",&result);
+	if(result==(a+b))
+	{
+		printf("答对了!\n");
+	}
+	else
+	{
+		k--;
+		printf("答错了!\n");
+	}
+	break;
+	}
+	case 1:
+	{
+		printf("%d-%d=",a,b);
+		scanf("%d",&result);
+	if(result==(a-b))
+	{
+		printf("答对了!\n");
+	}
+	else
+	{
+		k--;
+		printf("答错了!\n");
+	}
+	break;
+	}
+	case 2:
+	{
+		printf("%d*%d=",a,b);
+		scanf("%d",&result);
+	if(result==(a*b))
+	{
+		printf("答对了!\n");
+	}
+	else
+	{
+		k--;
+		printf("答错了!\n");
+	}
+	break;
+	}
+	case 3:
+	{
+		printf("%d/%d=",a,b);
+		scanf("%d",&result);
+	if(result==(a/b))
+	{
+		printf("答对了!\n");
+	}
+	else
+	{
+		k--;
+		printf("答错了!\n");
+	}
+	break;
+	}
+	}
+	n--;
+	}
+	printf("本次测试成绩为:%d\n",k*10);
+	system("pause");
+}
